@@ -41,7 +41,7 @@ spmat.shape
 h5.close()
 ```
 
-The sparse matrix can be used to derived the methylation levels in a strand-specific manner
+The sparse matrix can be used to derive the methylation levels in a strand-specific manner
 
 ```python
 profs = []
