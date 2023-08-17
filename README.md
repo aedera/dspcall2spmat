@@ -23,7 +23,7 @@ dspcall2spmat pred2spmat --file dsp_call.tsv \
 			 --ctx CG
 ```
 
-Load the created h5 file
+Load the created h5 file, and construct a sparse matrix containing the methylation calls
 
 ```python
 import h5py
@@ -41,7 +41,7 @@ spmat.shape
 h5.close()
 ```
 
-Now the loaded h5 file can be used to construct a sparse matrix from which the methylation levels can be derived in a strand-specific way
+The sparse matrix can be used to derived the methylation levels in a strand-specific manner
 
 ```python
 profs = []
