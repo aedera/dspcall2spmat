@@ -1,10 +1,31 @@
+# dspcall2spmat
+
+Small repository containing computational utilies to foster reproducibility.
+
+## Install
+
+Download repository, and go inside the downloaded repo and perform
 
 ```
-dspcall2spmat pred2spmat --file dsp_call.tsv --nproc 100 --out mychr1.h5 --target Chr1 --chrl Col-CEN_v1.2.lengths --ctx CG
+pip install .
 ```
 
+## File convertion
 
+Convert the calls into a h5 file
+
+```shell
+dspcall2spmat pred2spmat --file dsp_call.tsv \
+                         --nproc 100 \
+			 --out mychr1.h5 \
+			 --target Chr1 \
+			 --chrl Col-CEN_v1.2.lengths \
+			 --ctx CG
 ```
+
+Load the created h5 file
+
+```python
 import h5py
 import scipy
 
@@ -22,7 +43,7 @@ h5.close()
 
 Now the loaded h5 file can be used to construct a sparse matrix from which the methylation levels can be derived in a strand-specific way
 
-```
+```python
 profs = []
 for strand in [1, -1]: # [forward, reverse]
     uC = (spmat == strand*1).sum(axis=0).flatten() # num of unmethylated CGs
