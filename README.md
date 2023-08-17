@@ -4,7 +4,7 @@ Small repository containing computational utilies to foster reproducibility.
 
 ## Install
 
-Download repository, and go inside the downloaded repo and perform
+Download this repository, go inside the downloaded folder and perform
 
 ```
 pip install .
@@ -41,7 +41,7 @@ spmat.shape
 h5.close()
 ```
 
-The sparse matrix can be used to derive the methylation levels in a strand-specific manner
+The sparse matrix can be used to calculate the methylation levels in a strand-specific manner
 
 ```python
 profs = []
