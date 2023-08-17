@@ -1,6 +1,7 @@
 # dspcall2spmat
 
-Small repository containing computational utilies to foster reproducibility.
+Computational utility to process methylation data. It was released to
+foster reproducibility.
 
 ## Install
 
