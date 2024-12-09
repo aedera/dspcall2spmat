@@ -190,7 +190,7 @@ def main(args):
     print('Creating index')
     spmat = coo_array((data, (rows, cols)),
                       shape=(nrows, ncols),
-                      dtype=scipy.int8)
+                      dtype=np.int8)
     print('Converting format')
     spmat = spmat.tocsr() # to CSR format
 
